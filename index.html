@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jet Letter Designations - Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* Main Navigation Bar */
+        nav {
+            background-color: #222;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-logo {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .nav-links a {
+            color: #ddd;
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background-color: #444;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding: 2rem 1rem;
+            background-color: #333;
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        header:hover::before {
+            left: 100%;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Detail Sections */
+        .detail-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            scroll-margin-top: 80px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .detail-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .detail-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            border-radius: 0 0 12px 12px;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .detail-section:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .detail-section h2 {
+            color: #222;
+            margin-bottom: 1.2rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .detail-section h2::before {
+            content: '';
+            width: 8px;
+            height: 24px;
+            background-color: #555;
+            border-radius: 4px;
+        }
+
+        .detail-section p {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        .detail-section strong {
+            color: #222;
+            font-weight: 600;
+        }
+
+        .examples {
+            margin-top: 0.8rem;
+            padding: 0.8rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 3px solid #555;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 1.5rem;
+            background-color: #222;
+            color: #bbb;
+            font-size: 0.95rem;
+            border-radius: 8px 8px 0 0;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .detail-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="Index.html" class="nav-logo">JetCodes</a>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="details.html">Details</a>
+            <a href="examples.html">Examples</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Jet Letter Designations</h1>
+        <p>Learn about military aircraft types and their codes.</p>
+    </header>
+
+    <div class="detail-section">
+        <h2>F (Fighter)</h2>
+        <p>Fighter aircraft are designed for air combat. Examples include the F-22 Raptor and F-35 Lightning II.</p>
+        <div class="examples">
+            Examples: F-22, F-35
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <h2>B (Bomber)</h2>
+        <p>Bombers are used to drop bombs on targets. Examples: B-2 Spirit, B-52 Stratofortress.</p>
+        <div class="examples">
+            Examples: B-2, B-52
+        </div>
+    </div>
+
+    <footer>
+        <p>AFTAZHAR A. IBBA and WAREN S. TAVARES</p>
+    </footer>
+</div>
+
+</body>
+</html>
